@@ -11,10 +11,11 @@ import NoticeBoardPage from './pages/NoticeBoardPage';
 import ForgotUsernamePage from './pages/ForgotUsernamePage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import NoteBoardPage from './pages/NoteBoardPage';
+import LectureBoardPage from './pages/LectureBoardPage';
 import FreeBoardPage from './pages/FreeBoardPage';
 import NoticeDetailPage from './pages/NoticeDetailPage';
 import FreeBoardDetailPage from './pages/FreeBoardDetailPage';
+import LectureDetailPage from './pages/LectureDetailPage';
 
 const Navigation = () => {
   const { user } = useAuth();
@@ -31,7 +32,7 @@ const Navigation = () => {
           스터디헬퍼
         </Typography>
         <Button color="inherit" component={Link} to="/notices" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif' , fontWeight: 'bold'}}>공지사항</Button>
-        <Button color="inherit" component={Link} to="/noteboard" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>수업노트</Button>
+        <Button color="inherit" component={Link} to="/lectures" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>수업노트</Button>
         <Button color="inherit" component={Link} to="/freeboard" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>질문게시판</Button>
         {user ? (
           <Button color="inherit" component={Link} to="/profile" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold'}}>Profile</Button>
@@ -53,7 +54,8 @@ const App = () => {
         <Navigation />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/noteboard" element={<NoteBoardPage />} />
+          <Route path="/lectures" element={<LectureBoardPage />} />
+          <Route path="/lectures/:id" element={<LectureDetailPage />} />
           <Route path="/notices" element={<NoticeBoardPage />} />
           <Route path="/notices/:id" element={<NoticeDetailPage />} />
           <Route path="/login" element={<LoginPage />} />
