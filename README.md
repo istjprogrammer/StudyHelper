@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 스터디헬퍼 (Study Helper)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+스터디헬퍼는 학생들이 학습을 더 효율적으로 관리하고, 소통할 수 있도록 도와주는 웹 애플리케이션입니다. 공지사항, 수업 노트, 자유게시판, 잡담게시판 등의 기능을 통해 사용자들이 다양한 정보와 의견을 나눌 수 있습니다.
 
-## Available Scripts
+## 주요 기능
 
-In the project directory, you can run:
+- **공지사항**: 학교 공지사항을 한 눈에 확인할 수 있습니다.
+- **수업 노트**: 강의 내용을 기록하고, 관리할 수 있습니다.
+- **자유게시판**: 자유롭게 의견을 나누고, 소통할 수 있습니다.
 
-### `npm start`
+## 기술 스택
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **프론트엔드**: React, Material-UI
+- **백엔드**: (필요 시 백엔드 기술 스택을 추가하세요)
+- **상태 관리**: Context API
+- **라우팅**: React Router
+- **아이콘**: Material-UI Icons
+- **스타일링**: Material-UI, 커스텀 CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 프로젝트 구조
 
-### `npm test`
+src/
+│
+├── components/
+│ ├── FeaturesSection.js # 기능 소개 섹션
+│ ├── ...
+│
+├── context/
+│ └── AuthContext.js # 인증 컨텍스트
+│
+├── pages/
+│ ├── MainPage.js # 메인 페이지
+│ ├── NoticeBoardPage.js # 공지사항 페이지
+│ ├── LectureBoardPage.js # 수업 노트 페이지
+│ ├── ChatBoardPage.js # 잡담 게시판 페이지
+│ ├── LoginPage.js # 로그인 페이지
+│ ├── RegisterPage.js # 회원가입 페이지
+│ └── ...
+│
+├── App.js # 메인 앱 컴포넌트
+├── index.js # 엔트리 포인트
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기술 스택
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **프론트엔드**: React, Material-UI
+- **상태 관리**: Context API
+- **라우팅**: React Router
+- **아이콘**: Material-UI Icons
+- **스타일링**: Material-UI, 커스텀 CSS
