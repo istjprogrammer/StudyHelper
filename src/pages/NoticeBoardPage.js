@@ -4,7 +4,9 @@ import { Container, Card, CardContent, Typography, Box } from '@mui/material';
 const notices = [
   { id: 1, title: '게시글 1', content: '내용' },
   { id: 2, title: '게시글 2', content: '내용' },
-  { id: 3, title: '게시글 3', content: '내용' }
+  { id: 3, title: '게시글 3', content: '내용' },
+  { id: 4, title: '게시글 4', content: '내용' },
+
 ];
 
 const NoticeBoardPage = () => {
