@@ -14,6 +14,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import NoteBoardPage from './pages/NoteBoardPage';
 import FreeBoardPage from './pages/FreeBoardPage';
 import NoticeDetailPage from './pages/NoticeDetailPage';
+import FreeBoardDetailPage from './pages/FreeBoardDetailPage';
 
 const Navigation = () => {
   const { user } = useAuth();
@@ -31,7 +32,7 @@ const Navigation = () => {
         </Typography>
         <Button color="inherit" component={Link} to="/notices" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif' , fontWeight: 'bold'}}>공지사항</Button>
         <Button color="inherit" component={Link} to="/noteboard" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>수업노트</Button>
-        <Button color="inherit" component={Link} to="/freeboard" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>잡담게시판</Button>
+        <Button color="inherit" component={Link} to="/freeboard" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>질문게시판</Button>
         {user ? (
           <Button color="inherit" component={Link} to="/profile" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold'}}>Profile</Button>
         ) : (
@@ -61,6 +62,8 @@ const App = () => {
           <Route path="/forgot-username" element={<ForgotUsernamePage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/freeboard" element={<FreeBoardPage />} />
+          <Route path="/freeboard/:id" element={<FreeBoardDetailPage />} />
+          
         </Routes>
       </Router>
     </AuthProvider>

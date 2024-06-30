@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Box, Typography, Button, TextField, Grid } from '@mui/material';
+import { Container, Box, Typography, Button, TextField, Grid, Link } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 const initialPosts = [
   { id: 1, user: 'User1', content: '내용' },
@@ -31,7 +32,7 @@ const FreeBoardPage = () => {
           gutterBottom 
           sx={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold', color: '#3B1E1E' }}
         >
-          잡담게시판
+          질문게시판
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <TextField 
@@ -54,30 +55,32 @@ const FreeBoardPage = () => {
       <Grid container spacing={2}>
         {posts.map((post) => (
           <Grid item xs={12} key={post.id}>
-            <Box 
-              sx={{ 
-                backgroundColor: post.id % 2 === 1 ? '#FFFFFF' : '#FFEB3B', 
-                padding: '1rem', 
-                borderRadius: '8px', 
-                boxShadow: 1, 
-                display: 'flex', 
-                flexDirection: 'column', 
-                alignItems: post.id % 2 === 1 ? 'flex-start' : 'flex-end' 
-              }}
-            >
-              <Typography 
-                variant="body1" 
-                sx={{ fontFamily: 'KakaoRegular, Arial, sans-serif', color: '#3B1E1E' }}
+            <Link component={RouterLink} to={`/freeboard/${post.id}`} underline="none">
+              <Box 
+                sx={{ 
+                  backgroundColor: post.id % 2 === 1 ? '#FFFFFF' : '#FFEB3B', 
+                  padding: '1rem', 
+                  borderRadius: '8px', 
+                  boxShadow: 1, 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  alignItems: post.id % 2 === 1 ? 'flex-start' : 'flex-end' 
+                }}
               >
-                {post.user}
-              </Typography>
-              <Typography 
-                variant="body2" 
-                sx={{ fontFamily: 'KakaoRegular, Arial, sans-serif', color: '#3B1E1E' }}
-              >
-                {post.content}
-              </Typography>
-            </Box>
+                <Typography 
+                  variant="body1" 
+                  sx={{ fontFamily: 'KakaoRegular, Arial, sans-serif', color: '#3B1E1E' }}
+                >
+                  {post.user}
+                </Typography>
+                <Typography 
+                  variant="body2" 
+                  sx={{ fontFamily: 'KakaoRegular, Arial, sans-serif', color: '#3B1E1E' }}
+                >
+                  {post.content}
+                </Typography>
+              </Box>
+            </Link>
           </Grid>
         ))}
       </Grid>
