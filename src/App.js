@@ -13,6 +13,7 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import NoteBoardPage from './pages/NoteBoardPage';
 import FreeBoardPage from './pages/FreeBoardPage';
+import NoticeDetailPage from './pages/NoticeDetailPage';
 
 const Navigation = () => {
   const { user } = useAuth();
@@ -53,6 +54,7 @@ const App = () => {
           <Route path="/" element={<MainPage />} />
           <Route path="/noteboard" element={<NoteBoardPage />} />
           <Route path="/notices" element={<NoticeBoardPage />} />
+          <Route path="/notices/:id" element={<NoticeDetailPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />
