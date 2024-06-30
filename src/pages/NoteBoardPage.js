@@ -10,7 +10,7 @@ const initialChats = [
   { id: 2, title: '제목 6', content: '내용' },
 ];
 
-const ChatBoardPage = () => {
+const NoteBoardPage = () => {
   const [chats, setChats] = useState(initialChats);
   const [open, setOpen] = useState(false);
   const [currentChat, setCurrentChat] = useState({ id: null, title: '', content: '' });
@@ -52,7 +52,7 @@ const ChatBoardPage = () => {
           gutterBottom 
           sx={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}
         >
-          자유게시판
+          수업노트
         </Typography>
         <Button 
           variant="contained" 
@@ -138,4 +138,4 @@ const ChatBoardPage = () => {
   );
 };
 
-export default ChatBoardPage;
+export default NoteBoardPage;

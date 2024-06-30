@@ -8,11 +8,11 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import NoticeBoardPage from './pages/NoticeBoardPage';
-import LectureBoardPage from './pages/LectureBoardPage';
 import ForgotUsernamePage from './pages/ForgotUsernamePage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import ChatBoardPage from './pages/ChatBoardPage';
+import NoteBoardPage from './pages/NoteBoardPage';
+import FreeBoardPage from './pages/FreeBoardPage';
 
 const Navigation = () => {
   const { user } = useAuth();
@@ -29,8 +29,8 @@ const Navigation = () => {
           스터디헬퍼
         </Typography>
         <Button color="inherit" component={Link} to="/notices" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif' , fontWeight: 'bold'}}>공지사항</Button>
-        <Button color="inherit" component={Link} to="/lectures" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold'}}>수업노트</Button>
-        <Button color="inherit" component={Link} to="/chat" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>자유게시판</Button>
+        <Button color="inherit" component={Link} to="/noteboard" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>수업노트</Button>
+        <Button color="inherit" component={Link} to="/freeboard" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold' }}>잡담게시판</Button>
         {user ? (
           <Button color="inherit" component={Link} to="/profile" style={{ fontFamily: 'KakaoRegular, Arial, sans-serif', fontWeight: 'bold'}}>Profile</Button>
         ) : (
@@ -51,14 +51,14 @@ const App = () => {
         <Navigation />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/chat" element={<ChatBoardPage />} />
+          <Route path="/noteboard" element={<NoteBoardPage />} />
           <Route path="/notices" element={<NoticeBoardPage />} />
-          <Route path="/lectures" element={<LectureBoardPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/forgot-username" element={<ForgotUsernamePage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/freeboard" element={<FreeBoardPage />} />
         </Routes>
       </Router>
     </AuthProvider>
