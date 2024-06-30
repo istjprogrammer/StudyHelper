@@ -17,29 +17,6 @@
 - **아이콘**: Material-UI Icons
 - **스타일링**: Material-UI, 커스텀 CSS
 
-## 프로젝트 구조
-
-src/
-│
-├── components/
-│ ├── FeaturesSection.js # 기능 소개 섹션
-│ ├── ...
-│
-├── context/
-│ └── AuthContext.js # 인증 컨텍스트
-│
-├── pages/
-│ ├── MainPage.js # 메인 페이지
-│ ├── NoticeBoardPage.js # 공지사항 페이지
-│ ├── LectureBoardPage.js # 수업 노트 페이지
-│ ├── ChatBoardPage.js # 잡담 게시판 페이지
-│ ├── LoginPage.js # 로그인 페이지
-│ ├── RegisterPage.js # 회원가입 페이지
-│ └── ...
-│
-├── App.js # 메인 앱 컴포넌트
-├── index.js # 엔트리 포인트
-
 ## 기술 스택
 
 - **프론트엔드**: React, Material-UI
