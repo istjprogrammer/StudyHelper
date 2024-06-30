@@ -11,15 +11,6 @@
 ## 기술 스택
 
 - **프론트엔드**: React, Material-UI
-- **백엔드**: (필요 시 백엔드 기술 스택을 추가하세요)
-- **상태 관리**: Context API
-- **라우팅**: React Router
-- **아이콘**: Material-UI Icons
-- **스타일링**: Material-UI, 커스텀 CSS
-
-## 기술 스택
-
-- **프론트엔드**: React, Material-UI
 - **상태 관리**: Context API
 - **라우팅**: React Router
 - **아이콘**: Material-UI Icons
